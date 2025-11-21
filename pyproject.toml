@@ -7,15 +7,18 @@ name = "qml-hello-world"
 version = "0.1.0"
 description = "Quantum Machine Learning Hello World Project"
 authors = [
-    {name = "Seth C", email = "dm-me-on@linkedin.com"},
+    {name = "Seth C", email = "dm_me_on@linkedin.com"},
 ]
 requires-python = ">=3.9"
 dependencies = [
     "pennylane",
 ]
 
+[project.scripts]
+qml-hello = "qml_hello_world.main:main"
+
 [dependency-groups]
 dev = []
 
 [tool.hatch.build.targets.wheel]
-packages = ["."]
+packages = ["src/qml_hello_world"]
